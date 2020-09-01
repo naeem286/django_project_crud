@@ -1,3 +1,8 @@
+{% extends 'base.html' %}
+
+{#{% load crispy_forms_tags %}#}
+
+{% block content %}
 <h1>Books</h1>
 
 <table border="1">
@@ -13,7 +18,7 @@
 <tbody>
     {% for book in object_list %}
     <tr>
-    <td>{{ book.name }}</td>
+    <td>{{ book.name  }}</td>
     <td>{{ book.author }}</td>
     <td>{{ book.pages }}</td>
     <td><a href="{% url "book_view" book.id %}">view</a></td>
@@ -25,3 +30,5 @@
 </table>
 
 <a href="{% url "book_new" %}">New</a>
+
+{% endblock %}
