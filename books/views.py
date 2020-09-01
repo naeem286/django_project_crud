@@ -16,13 +16,13 @@ class BookView(DetailView):
 
 class BookCreate(CreateView):
     model = Book
-    fields = ['name', 'pages']
+    fields = ['name', 'author', 'pages']
     success_url = reverse_lazy('book_list')
 
 
 class BookUpdate(UpdateView):
     model = Book
-    fields = ['name', 'pages']
+    fields = ['name', 'author', 'pages']
     success_url = reverse_lazy('book_list')
 
 
